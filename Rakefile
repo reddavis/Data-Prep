@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "data_prep"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A tool to help prepare your data.}
+    gem.description = %Q{A tool to help prepare your data.}
     gem.email = "reddavis@gmail.com"
     gem.homepage = "http://github.com/reddavis/data_prep"
     gem.authors = ["reddavis"]
