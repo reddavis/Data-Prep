@@ -23,13 +23,14 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "data_prep.gemspec",
      "lib/data_prep.rb",
      "lib/ext/array.rb",
      "spec/array_spec.rb",
      "spec/data_prep_spec.rb",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/reddavis/data_prep}
+  s.homepage = %q{http://github.com/reddavis/Data-Prep}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
