@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{A tool to help prepare your data.}
     gem.description = %Q{A tool to help prepare your data.}
     gem.email = "reddavis@gmail.com"
-    gem.homepage = "http://github.com/reddavis/data_prep"
+    gem.homepage = "http://github.com/reddavis/Data-Prep"
     gem.authors = ["reddavis"]
     gem.add_development_dependency "rspec"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
