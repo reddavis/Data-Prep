@@ -1,18 +1,28 @@
-= data_prep
+= Data Prep
 
-Description goes here.
+Data Prep is a gem that makes extracting: training, testing and validation data nice and simple.
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+All you have to do is give it your data and Data Prep will try to spread your classes as evenly as possible in a 50:25:25 (training, testing, validation) split.
+
+== Example
+
+  ham = [1] * 20
+  spam = [0] * 20
+  data_prep = DataPrep.new(1 => ham, 0 => spam)
+  
+  data_prep.testing.size
+     #=> 10
+  data_prep.validation.size
+     #=> 10
+  data_prep.training.size
+     #=> 20
+  
+  # To make training easy, Data Prep places the data's class
+  # along side the piece of data
+  
+  data_prep.training[0].inspect
+     #=> [1, [1]] == [class, [data]]
 
 == Copyright
 
-Copyright (c) 2009 reddavis. See LICENSE for details.
+Copyright (c) 2009 Red Davis. See LICENSE for details.
