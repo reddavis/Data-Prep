@@ -4,6 +4,11 @@ Data Prep is a gem that makes extracting: training, testing and validation data 
 
 All you have to do is give it your data and Data Prep will try to spread your classes as evenly as possible in a 50:25:25 (training, testing, validation) split.
 
+== Install
+
+  sudo gem sources -a http://gemcutter.org
+  sudo gem install date_prep
+
 == Example
 
   ham = [[1, 0.5]] * 20
