@@ -4,8 +4,8 @@ describe "DataPrep" do
   
   describe "Creating the data sets" do
     before do
-      ham = [1] * 20
-      spam = [0] * 20
+      ham = [[1, 0.5]] * 20
+      spam = [[0, 0.2]] * 20
       @data_prep = DataPrep.new(0 => ham, 1 => spam)
     end
     
@@ -17,6 +17,11 @@ describe "DataPrep" do
     
     it "should inject the outputs" do
       @data_prep.training[0].size.should == 2
+    end
+    
+    it "should hold 2 arrays" do
+      @data_prep.training[0][0].class.should == Array
+      @data_prep.training[0][1].class.should == Array      
     end
     
   end

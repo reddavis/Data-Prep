@@ -6,8 +6,8 @@ All you have to do is give it your data and Data Prep will try to spread your cl
 
 == Example
 
-  ham = [1] * 20
-  spam = [0] * 20
+  ham = [[1, 0.5]] * 20
+  spam = [[0, 0.2]] * 20
   data_prep = DataPrep.new(1 => ham, 0 => spam)
   
   data_prep.testing.size
@@ -21,7 +21,7 @@ All you have to do is give it your data and Data Prep will try to spread your cl
   # along side the piece of data
   
   data_prep.training[0].inspect
-     #=> [[1], 1] == [class, [data]]
+     #=> [[1, 0.5], [1]] == [[data], [output]]
 
 == Copyright
 

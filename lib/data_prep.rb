@@ -14,7 +14,7 @@ class DataPrep
   def inject_outputs(data)
     @data = []
     data.each_pair do |output, data|
-      @data << data.map! {|x| [x, [output]]}
+      @data << data.map! {|x| [[output], x]}
     end
   end
   
