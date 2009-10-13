@@ -23,7 +23,18 @@ describe "DataPrep" do
       @data_prep.training[0][0].class.should == Array
       @data_prep.training[0][1].class.should == Array      
     end
+  end
+  
+  describe "When having a target thats array" do
+    before do
+      ham = [[1, 0.5]] * 20
+      spam = [[0, 0.2]] * 20
+      @data_prep = DataPrep.new([0] => ham, [1] => spam)
+    end
     
+    it "should hold 2 arrays" do
+      @data_prep.training[0][1].dimensions.should == 1
+    end
   end
   
 end
